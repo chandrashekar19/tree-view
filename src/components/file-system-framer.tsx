@@ -10,7 +10,7 @@ type Node = {
   nodes?: Node[];
 };
 
-export function FilesystemItemAnimated({ node }: { node: Node }) {
+export const FilesystemAnimated = ({ node }: { node: Node }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
@@ -50,11 +50,11 @@ export function FilesystemItemAnimated({ node }: { node: Node }) {
             className="pl-6 overflow-hidden flex flex-col justify-end"
           >
             {node.nodes?.map((node) => (
-              <FilesystemItemAnimated node={node} key={node.name} />
+              <FilesystemAnimated node={node} key={node.name} />
             ))}
           </motion.ul>
         )}
       </AnimatePresence>
     </li>
   );
-}
+};

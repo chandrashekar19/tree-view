@@ -1,10 +1,10 @@
-import { FilesystemItem } from "./file-system";
+import { FilesystemAnimated } from "./file-system-framer";
 
 export const Page = () => {
   return (
     <ul>
       {nodes.map((node) => (
-        <FilesystemItem node={node} key={node.name} />
+        <FilesystemAnimated node={node} key={node.name} />
       ))}
     </ul>
   );
